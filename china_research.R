@@ -16,4 +16,8 @@ for (i in 1:nrow(instr[1])) {
   curPacf <- pacf(t2["MidR"],plot=FALSE, na.action=na.pass)$acf[1:20]
   result <- rbind(result, curPacf)  
 }
+rownames(result) <- instr[,1]
 result
+#hc1507       -0.9997799088      -1.782666e+01         1.0014372293
+#x <- "hc1507"
+#curPacf <- pacf(t2["MidR"],plot=TRUE, na.action=na.pass)
